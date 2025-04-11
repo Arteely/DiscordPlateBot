@@ -2,7 +2,15 @@
 require("dotenv").config();
 const { Client, IntentsBitField, EmbedBuilder } = require("discord.js");
 const mongoose = require("mongoose");
+
+const express = require('express')
+const app = express()
 const port = process.env.PORT || 4000;
+
+app.listen(port, () => {
+  console.log(`App listening on port ${port}`)
+})
+
 const { registerCommands } = require("./commands");
 const {
   calculatePlateScore,
