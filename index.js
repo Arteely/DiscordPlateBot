@@ -2,6 +2,7 @@
 require("dotenv").config();
 const { Client, IntentsBitField, EmbedBuilder } = require("discord.js");
 const mongoose = require("mongoose");
+const port = process.env.PORT || 4000;
 const { registerCommands } = require("./commands");
 const {
   calculatePlateScore,
